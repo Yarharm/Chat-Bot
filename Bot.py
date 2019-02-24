@@ -1,51 +1,60 @@
-import sqlite3
-from sqlite3 import Error
+import logging
+import pandas as pd
+from database_manager import DbManager
 from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+from chatterbot.trainers import ListTrainer, ChatterBotCorpusTrainer
+
+# Process logging
+logger = logging.getLogger()
+logger.setLevel(logging.CRITICAL)
 
 
 # Initialize the bot
-cb = ChatBot(
+bot = ChatBot(
     'Terminal',
+    read_only=True,
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
+    database_uri='sqlite:///database.db',
     logic_adapters=[
-        'chatterbot.logic.MathematicalEvaluation',
-        'chatterbot.logic.TimeLogicAdapter',
         'chatterbot.logic.BestMatch'
-    ],
-    database_uri='sqlite:///database.db'
+    ]
 )
 
-# Training conversation
-conversation = [
-    'How many boys are in Ukraine?',
-    'There are two boys: Vadim and Taras'
-]
 
-# Train step
-#trainer = ListTrainer(cb)
-#trainer.train(conversation)
+# Get dataset
+#data = pd.read_json('recipes.json')
+#titles = data['title']
+#titles = titles.dropna(axis=0)
+#titles = titles.values
+
+# Train bot
+#trainer = ListTrainer(bot)
+#trainer.train(titles)
+
+
+# Initialize database manager
+db_man = DbManager()
+
+# Get database info
+#db_man.get_db_content(bot, tables=False, storage=False)
+
+# Train with corpus
+def train_corpus(bot, corpus):
+    # English corpus => "chatterbot.corpus.english"
+    trainer = ChatterBotCorpusTrainer(bot)
+    trainer.train(corpus)
 
 # Getting response
-#while True:
-#    try:
-#        bot_input = cb.get_response(input())
-#        print(bot_input)
+def bot_session(bot):
+    while True:
+        try:
+            inp = input()
+            bot_input = bot.get_response(inp)
+            print(bot_input)
 
-#    except(KeyboardInterrupt, EOFError, SystemExit):
-#        break
+        except(KeyboardInterrupt, EOFError, SystemExit):
+            break
 
-# Connect to sqlite
-db = './database.db'
-try:
-    conn = sqlite3.connect(db)
-except Error as e:
-    print(e)
-
-# Create cursor
-cur = conn.cursor()
-cur.execute("select name from sqlite_master where type = 'table';")
-
-tables = cur.fetchall()
-for table in tables:
-    print(table)
+bot_session(bot)
+#response = bot.get_response("what is your name?")
+#print(response)
