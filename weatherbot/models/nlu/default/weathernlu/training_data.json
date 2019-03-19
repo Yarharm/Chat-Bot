@@ -2,17 +2,14 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "text": "Hello",
         "intent": "greet",
-        "entities": []
+        "text": "Hello"
       },
       {
-        "text": "goodbye",
         "intent": "goodbye",
-        "entities": []
+        "text": "goodbye"
       },
       {
-        "text": "What's the weather in Berlin at the moment?",
         "intent": "inform",
         "entities": [
           {
@@ -21,70 +18,58 @@
             "value": "Berlin",
             "entity": "location"
           }
-        ]
-      },
-	  {
-        "text": "hey",
-        "intent": "greet",
-        "entities": []
+        ],
+        "text": "What's the weather in Berlin at the moment?"
       },
       {
-        "text": "hello",
         "intent": "greet",
-        "entities": []
+        "text": "hey"
       },
       {
-        "text": "hi",
         "intent": "greet",
-        "entities": []
+        "text": "hello"
       },
       {
-        "text": "heya",
         "intent": "greet",
-        "entities": []
+        "text": "hi"
       },
       {
-        "text": "howdy",
         "intent": "greet",
-        "entities": []
+        "text": "heya"
       },
       {
-        "text": "hey there",
         "intent": "greet",
-        "entities": []
+        "text": "howdy"
       },
       {
-        "text": "bye",
+        "intent": "greet",
+        "text": "hey there"
+      },
+      {
         "intent": "goodbye",
-        "entities": []
+        "text": "bye"
       },
       {
-        "text": "goodbye",
         "intent": "goodbye",
-        "entities": []
+        "text": "goodbye"
       },
       {
-        "text": "bye bye",
         "intent": "goodbye",
-        "entities": []
+        "text": "bye bye"
       },
       {
-        "text": "see ya",
         "intent": "goodbye",
-        "entities": []
+        "text": "see ya"
       },
       {
-        "text": "see you later",
         "intent": "goodbye",
-        "entities": []
+        "text": "see you later"
       },
       {
-        "text": "What's the weather today?",
         "intent": "inform",
-        "entities": []
+        "text": "What's the weather today?"
       },
       {
-        "text": "What's the weather in London today?",
         "intent": "inform",
         "entities": [
           {
@@ -93,10 +78,10 @@
             "value": "London",
             "entity": "location"
           }
-        ]
+        ],
+        "text": "What's the weather in London today?"
       },
       {
-        "text": "Show me what's the weather in Paris",
         "intent": "inform",
         "entities": [
           {
@@ -105,10 +90,10 @@
             "value": "Paris",
             "entity": "location"
           }
-        ]
+        ],
+        "text": "Show me what's the weather in Paris"
       },
       {
-        "text": "I wonder what is the weather in Vilnius right now?",
         "intent": "inform",
         "entities": [
           {
@@ -117,20 +102,18 @@
             "value": "Vilnius",
             "entity": "location"
           }
-        ]
+        ],
+        "text": "I wonder what is the weather in Vilnius right now?"
       },
       {
-        "text": "what is the weather?",
         "intent": "inform",
-        "entities": []
+        "text": "what is the weather?"
       },
       {
-        "text": "Tell me the weather",
         "intent": "inform",
-        "entities": []
+        "text": "Tell me the weather"
       },
       {
-        "text": "Is the weather nice in Barcelona today?",
         "intent": "inform",
         "entities": [
           {
@@ -139,10 +122,10 @@
             "value": "Barcelona",
             "entity": "location"
           }
-        ]
+        ],
+        "text": "Is the weather nice in Barcelona today?"
       },
       {
-        "text": "I am going to London today and I wonder what is the weather out there?",
         "intent": "inform",
         "entities": [
           {
@@ -151,10 +134,10 @@
             "value": "London",
             "entity": "location"
           }
-        ]
+        ],
+        "text": "I am going to London today and I wonder what is the weather out there?"
       },
       {
-        "text": "I am planning my trip to Amsterdam. What is the weather out there?",
         "intent": "inform",
         "entities": [
           {
@@ -163,10 +146,10 @@
             "value": "Amsterdam",
             "entity": "location"
           }
-        ]
+        ],
+        "text": "I am planning my trip to Amsterdam. What is the weather out there?"
       },
       {
-        "text": "Show me the weather in Dublin, please",
         "intent": "inform",
         "entities": [
           {
@@ -175,10 +158,10 @@
             "value": "Dublin",
             "entity": "location"
           }
-        ]
+        ],
+        "text": "Show me the weather in Dublin, please"
       },
       {
-        "text": "in London",
         "intent": "inform",
         "entities": [
           {
@@ -187,10 +170,10 @@
             "value": "London",
             "entity": "location"
           }
-        ]
+        ],
+        "text": "in London"
       },
       {
-        "text": "Lithuania",
         "intent": "inform",
         "entities": [
           {
@@ -199,10 +182,10 @@
             "value": "Lithuania",
             "entity": "location"
           }
-        ]
+        ],
+        "text": "Lithuania"
       },
       {
-        "text": "Oh, sorry, in Italy",
         "intent": "inform",
         "entities": [
           {
@@ -211,10 +194,10 @@
             "value": "Italy",
             "entity": "location"
           }
-        ]
+        ],
+        "text": "Oh, sorry, in Italy"
       },
       {
-        "text": "Tell me the weather in Vilnius",
         "intent": "inform",
         "entities": [
           {
@@ -223,10 +206,10 @@
             "value": "Vilnius",
             "entity": "location"
           }
-        ]
+        ],
+        "text": "Tell me the weather in Vilnius"
       },
       {
-        "text": "The weather condition in Italy",
         "intent": "inform",
         "entities": [
           {
@@ -235,8 +218,12 @@
             "value": "Italy",
             "entity": "location"
           }
-        ]
+        ],
+        "text": "The weather condition in Italy"
       }
-    ]
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
   }
 }
