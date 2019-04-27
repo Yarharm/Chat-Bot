@@ -4,9 +4,9 @@ import os
 
 class RawDataParser:
     """
-    Parse for recipes and ingredients from the files found at:
-        'https://www.kaggle.com/hugodarwood/epirecipes#epi_r.csv'
-    And write processed results to the Interpreter data.json
+    Parse for recipes and ingredients from the Kaggle challenge at:
+        'https://www.kaggle.com/hugodarwood/'
+    And write processed results to the data.json for the Rasa NLU Interpreter
 
     NOTE: Every recipe and ingredient processed as *Lowercase* only
     """
