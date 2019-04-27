@@ -1,0 +1,41 @@
+slots:
+  ingredient:
+    type: list
+
+
+intents:
+ - greet
+ - goodbye
+ - inform
+
+
+entities:
+ - ingredient
+
+templates:
+  utter_greet:
+    - 'Hello! How can I help?'
+    - 'It’s good to see you.'
+    - 'G’day!'
+    - 'Howdy!'
+    - 'Hey there.'
+    - 'Yo!'
+  utter_goodbye:
+    - 'Talk to you later.'
+    - 'Bye bye :('
+    - 'See you later!'
+    - 'Talk to you later!'
+    - 'See you soon'
+    - 'Have a nice day'
+    - 'Take care'
+  utter_ask_ingredients:
+    - 'What kind of ingredients do you have?'
+    - 'So, what do we have in a fridge?:)'
+    - 'What kind of ingredients are we working with?'
+
+
+actions:
+ - utter_greet
+ - utter_goodbye
+ - utter_ask_ingredients
+ - action_recipe
