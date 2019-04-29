@@ -1,6 +1,5 @@
 # Custom Actions
 
-
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import unicode_literals
@@ -14,7 +13,7 @@ class ActionRecipe(Action):
     Every Custom Action MUST inherit Rasa Class "Action"
     """
     def name(self):
-        return 'action_recipe' # Identical name in Domain.yml
+        return 'action_recipe'  # Identical name in Domain.yml
 
     def run(self, dispatcher, tracker, domain):
 
