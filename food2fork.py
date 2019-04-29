@@ -1,4 +1,4 @@
-import urllib.request
+from urllib.request import Request, urlopen
 import urllib.parse
 import json
 
@@ -23,9 +23,9 @@ class Food2ForkClient():
         self.SEARCH = 'http://food2fork.com/api/search'
         self.VIEW = 'http://food2fork.com/api/get'
 
-    def search(self, query, page=1, pageSize=30):
+    def search(self, query, page=1):
         try:
-            url = self.urlHelper(self.SEARCH, q=query, page=page, count=pageSize)
+            url = self.urlHelper(self.SEARCH, q=query, page=page)
 
             contents = self.getUrlContents(url)
 
@@ -66,10 +66,8 @@ class Food2ForkClient():
         :return:
         """
         try:
-            response = urllib.request.urlopen(url)
-
-            contents = response.read()
-
+            req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+            contents = urlopen(req).read()
             return contents
 
         except Exception as instance:

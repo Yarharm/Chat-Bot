@@ -19,7 +19,7 @@ class ActionRecipe(Action):
     def run(self, dispatcher, tracker, domain):
 
         # Get Food2Fork Api Key
-        with open('food2fork.txt') as keyFile:
+        with open('food_to_fork.txt') as keyFile:
             api_key = keyFile.readline()
 
         # Post request
