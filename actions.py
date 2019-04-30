@@ -27,7 +27,6 @@ class ActionRecipe(Action):
 
         # Convert ingredient list to CS list
         query = ",".join(recipe_ingredients)
-        print('Extracted ingredient slots: ', query)
 
         response = f2fClient.search(query)
 
