@@ -37,8 +37,7 @@ class ActionRecipe(Action):
 
         # Bot response
         response = 'I found {0}.\n' \
-                   'You can check it out at food2fork website: {1},\n' \
-                   'or at original source: {2}'.format(title, f2f_url, source_url)
+                   'You can check it out at: [1]'.format(title, source_url)
 
         dispatcher.utter_message(response)
         return [SlotSet('ingredient', recipe_ingredients)]
